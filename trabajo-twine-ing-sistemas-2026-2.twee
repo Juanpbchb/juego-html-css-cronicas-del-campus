@@ -1,0 +1,598 @@
+:: StoryTitle
+Crónicas del Campus: ¿Estudiar o Procrastinar?
+
+
+:: StoryData
+{
+  "ifid": "785554EC-0E60-4207-9BC4-382E04791137",
+  "format": "SugarCube",
+  "format-version": "2.30.0",
+  "start": "El Laberinto del Reloj: ¿Estudiar o Procrastinar?",
+  "zoom": 1
+}
+
+
+:: StoryStylesheet [stylesheet]
+/* ═══════════════════════════════════════════════════
+   CRÓNICAS DEL CAMPUS — Estilo Zork Retro
+   Paleta: Terminal Verde + Fondos Dinámicos
+   Técnica: Glassmorphism Retro (Blurry Cards)
+   ═══════════════════════════════════════════════════ */
+
+/* ——— Google Fonts ——— */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/* ——— Reset & Base ——— */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #000;
+}
+
+body {
+  color: #4af626; /* Verde Fósforo / Zork */
+  font-family: 'VT323', monospace;
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+/* ——— Fondos dinámicos según lo que está pasando ——— */
+body {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease-in-out;
+}
+
+/* Fondo por defecto / Noche de estudio */
+body {
+  background-image: url('primera-escena.png');
+  background-size: 100%; 
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* 1. Pasaje Inicial: El Laberinto del Reloj */
+body[data-passagename="El Laberinto del Reloj: ¿Estudiar o Procrastinar?"] {
+  /* Reemplazar con URL de imagen para el inicio */
+  background-image: url('primera-escena.png');
+  background-size: 100%; 
+}
+
+/* 2. Pasaje: Estudio_Limpio */
+body[data-passagename="Estudio_Limpio"] {
+  /* Reemplazar con URL de imagen para: Leer los apuntes y empezar ejercicios */
+  background-image: url('segunda-escena.png');
+}
+
+/* 3. Pasaje: Distraccion_Redes */
+body[data-passagename="Distraccion_Redes"] {
+  /* Reemplazar con URL de imagen para: Revisar el celular */
+  background-image: url('decimoprimera-escena.png');
+  background-size: 75%;
+}
+
+/* 4. Pasaje: Cocina_SpeedMax */
+body[data-passagename="Cocina_SpeedMax"] {
+  /* Reemplazar con URL de imagen para: Ir a la cocina por cafeína */
+  background-image: url('decimoquinta-escena.png');
+}
+
+/* 5. Pasaje: Consejo_Sofia */
+body[data-passagename="Consejo_Sofia"] {
+  /* Reemplazar con URL de imagen para: Pedir consejo a Sofía */
+  background-image: url('decimosexta-escena.png');
+}
+
+/* 6. Pasaje: Huir_Cuarto */
+body[data-passagename="Huir_Cuarto"] {
+  /* Reemplazar con URL de imagen para: Huir a tu cuarto tras ver a Sofía */
+  background-image: url('decimooctava-escena.png');
+}
+
+/* 7. Pasaje: Plan_Sofia */
+body[data-passagename="Plan_Sofia"] {
+  /* Reemplazar con URL de imagen para: Seguir el plan de estudio de Sofía */
+  background-image: url('decimoseptima-escena.png');
+}
+
+/* 8. Pasaje: Panico_Medianoche */
+body[data-passagename="Panico_Medianoche"] {
+  /* Reemplazar con URL de imagen para: Entrar en pánico a las 3 AM */
+  background-image: url('decimosegunda-escena.png');
+}
+
+/* 9. Pasaje: Llamada_Desesperada */
+body[data-passagename="Llamada_Desesperada"] {
+  /* Reemplazar con URL de imagen para: Escribirle a Carlos en pánico */
+  background-image: url('decimocuarta-escena.png');
+}
+
+/* 10. Pasaje: Ruta_Solitaria */
+body[data-passagename="Ruta_Solitaria"] {
+  /* Reemplazar con URL de imagen para: Ignorar a Carlos y estudiar solo */
+  background-image: url('tercera-escena.png');
+}
+
+/* 11. Pasaje: Llamada_Carlos */
+body[data-passagename="Llamada_Carlos"] {
+  /* Reemplazar con URL de imagen para: Videollamada de estudio con Carlos */
+  background-image: url('septima-escena.png');
+}
+
+/* 12. Pasaje: Pausa_Estiramiento */
+body[data-passagename="Pausa_Estiramiento"] {
+  /* Reemplazar con URL de imagen para: Tomar pausa de 10 min para estirar */
+  background-image: url('decima-escena.png');
+  background-size: 80%;
+}
+
+/* 13. Pasaje: Fase_Descanso */
+body[data-passagename="Fase_Descanso"] {
+  /* Reemplazar con URL de imagen para: Dormir 4 horas */
+  background-image: url('cuarta-escena.png');
+}
+
+/* 14. Pasaje: EstudioZombi */
+body[data-passagename="EstudioZombi"] {
+  /* Reemplazar con URL de imagen para: Forzar memorización exhausto */
+  background-image: url('decimotercera-escena.png');
+}
+
+/* 15. Pasaje: Amanecida_Total */
+body[data-passagename="Amanecida_Total"] {
+  /* Reemplazar con URL de imagen para: Pasar de largo sin dormir */
+  background-image: url('octava-escena.png');
+}
+
+/* 16. Pasaje: El_Examen_Final */
+body[data-passagename="El_Examen_Final"] {
+  /* Reemplazar con URL de imagen para: Momento de presentar el examen */
+  background-image: url('quinta-escena.png');
+}
+
+/* 17. Pasaje: DesenlacePositivo */
+body[data-passagename="DesenlacePositivo"] {
+  /* Reemplazar con URL de imagen para: ¡Aprobaste! */
+  background-image: url('sexta-escena.png');
+}
+
+/* 18. Pasaje: DesenlaceNegativo */
+body[data-passagename="DesenlaceNegativo"] {
+  /* Reemplazar con URL de imagen para: Suspendiste por colapso */
+  background-image: url('novena-escena.png');
+  background-size: 80%;
+}
+
+/* 19. Pasaje: DesenlaceIncierto */
+body[data-passagename="DesenlaceIncierto"] {
+  /* Reemplazar con URL de imagen para: Aprobaste raspando */
+  background-image: url('decimonovena-escena.png');
+}
+
+/* ——— Ocultar sidebar por defecto de SugarCube ——— */
+#ui-bar, #ui-bar-toggle, #ui-bar-history, #ui-bar-body { display: none !important; }
+#story { margin-left: 0 !important; padding: 0 !important; width: 100% !important; }
+
+/* ——— Layout del pasaje ——— */
+#passages {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 110px 24px 80px;
+  box-sizing: border-box;
+}
+
+/* ——— Contenedor Tarjeta Blurry ——— */
+.passage {
+  max-width: 800px;
+  width: 100%;
+}
+
+.text-card {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 2px solid #4af626;
+  border-radius: 4px;
+  padding: 2.5rem 3rem;
+  box-shadow: 0 0 20px rgba(74, 246, 38, 0.2);
+  text-shadow: 0 0 4px rgba(74, 246, 38, 0.4);
+  margin-bottom: 2rem;
+}
+
+/* ——— Tipografía narrativa extra ——— */
+.text-card strong, .text-card b {
+  color: #fff;
+  font-weight: normal;
+  text-shadow: 0 0 6px #fff;
+}
+
+.text-card em, .text-card i {
+  color: #a3ff99;
+}
+
+/* ——— Links / Opciones de decisión (Estilo Comando) ——— */
+.passage a {
+  display: block;
+  margin: 1rem 0;
+  padding: 1.2rem 1.5rem;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 2px solid #4af626;
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(74, 246, 38, 0.2);
+  color: #4af626;
+  text-decoration: none;
+  font-family: 'VT323', monospace;
+  font-size: 1.5rem;
+  transition: all 0.2s;
+}
+
+.passage a::before {
+  content: '> ';
+  opacity: 0.7;
+}
+
+.passage a:hover {
+  background: rgba(74, 246, 38, 0.3);
+  color: #fff;
+  text-shadow: 0 0 8px #4af626;
+  padding-left: 2rem;
+}
+
+.passage ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+}
+.passage li {
+  margin: 0;
+}
+
+/* ——— HUD Estilo Consola ——— */
+#hud {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0.8rem 2rem;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-bottom: 2px solid #4af626;
+  font-family: 'VT323', monospace;
+  color: #4af626;
+}
+
+.hud-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hud-label {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #4af626;
+}
+
+.hud-bar-track {
+  width: 100px;
+  height: 12px;
+  background: rgba(74, 246, 38, 0.1);
+  border: 1px solid #4af626;
+}
+
+.hud-bar-fill {
+  height: 100%;
+  background: #4af626;
+  transition: width 0.5s ease;
+}
+
+.hud-value {
+  font-size: 1.2rem;
+  width: 35px;
+  text-align: right;
+  color: #fff;
+}
+
+/* Ocultar iconos emoji en Zork style */
+.hud-icon { display: none; }
+
+/* ——— Responsive ——— */
+@media (max-width: 860px) {
+  #hud { gap: 1rem; padding: 0.5rem; flex-wrap: wrap; }
+  .hud-bar-track { width: 60px; }
+  .passage { padding: 1.5rem; border-width: 1px; font-size: 1.2rem; }
+  .passage a { font-size: 1.3rem; }
+}
+
+/* ——— Scrollbar ——— */
+ ::-webkit-scrollbar { width: 8px; }
+ ::-webkit-scrollbar-track { background: #000; border-left: 1px solid #4af626; }
+ ::-webkit-scrollbar-thumb { background: #4af626; }
+ ::-webkit-scrollbar-thumb:hover { background: #fff; }
+
+
+:: StoryScript [script]
+/* ═══════════════════════════════════════════════════
+   HUD Dinámico — Inyectado fuera de #passages
+   para persistir entre transiciones de pasajes.
+   ═══════════════════════════════════════════════════ */
+$(document).on(':passagestart', function (ev) {
+  /* Soluciona el problema de slugificación de data-passage de SugarCube */
+  document.body.setAttribute('data-passagename', ev.passage.title);
+});
+
+$(document).on(':passagedisplay', function () {
+  var hud = document.getElementById('hud');
+
+  /* Crear el HUD solo la primera vez, fuera de #passages */
+  if (!hud) {
+    hud = document.createElement('div');
+    hud.id = 'hud';
+    document.body.prepend(hud);
+  }
+
+  /* Leer variables del state con valores seguros */
+  var sv  = State.variables;
+  var con = Math.min(Math.max(sv.conocimiento || 0, 0), 100);
+  var ene = Math.min(Math.max(sv.energia      || 0, 0), 100);
+  var est = Math.min(Math.max(sv.estres        || 0, 0), 100);
+
+  /* Renderizar barras */
+  hud.innerHTML = ''
+    + '<div class="hud-stat">'
+    +   '<span class="hud-icon">📚</span>'
+    +   '<span class="hud-label">Conocimiento</span>'
+    +   '<div class="hud-bar-track">'
+    +     '<div class="hud-bar-fill conocimiento" style="width:' + con + '%"></div>'
+    +   '</div>'
+    +   '<span class="hud-value conocimiento-val">' + con + '</span>'
+    + '</div>'
+    + '<div class="hud-stat">'
+    +   '<span class="hud-icon">⚡</span>'
+    +   '<span class="hud-label">Energía</span>'
+    +   '<div class="hud-bar-track">'
+    +     '<div class="hud-bar-fill energia" style="width:' + ene + '%"></div>'
+    +   '</div>'
+    +   '<span class="hud-value energia-val">' + ene + '</span>'
+    + '</div>'
+    + '<div class="hud-stat">'
+    +   '<span class="hud-icon">🔥</span>'
+    +   '<span class="hud-label">Estrés</span>'
+    +   '<div class="hud-bar-track">'
+    +     '<div class="hud-bar-fill estres" style="width:' + est + '%"></div>'
+    +   '</div>'
+    +   '<span class="hud-value estres-val">' + est + '</span>'
+    + '</div>';
+});
+
+
+:: Amanecida_Total {"position":"800,800","size":"100,100"}
+<<set $conocimiento += 15>>
+<<set $energia -= 40>>
+<<set $estres += 20>>
+<div class="text-card">
+Pasas de largo. A las 4:00 AM tu vista está borrosa y parpadeas con dificultad. Has entendido gran parte de la materia, pero tu cuerpo te está pasando una factura altísima. El amanecer se asoma por la ventana.
+
+</div>
+* [[Aguantar los últimos minutos y repasar las fórmulas->El_Examen_Final]]
+
+
+
+:: Cocina_SpeedMax {"position":"1600,400","size":"100,100"}
+<<set $energia += 20>>
+<<set $estres += 5>>
+<div class="text-card">
+Vas a la cocina a buscar un SpeedMax que tienes guardado para emergencias. En el camino te cruzas con Sofía, tu compañera de apartamento y monitora de la facultad, quien te ve cara de zombie y te pregunta qué te pasa.
+
+</div>
+* [[Contarle tu crisis y pedirle un consejo exprés sobre cómo estructurar el estudio->Consejo_Sofia]]
+* [[Decirle que todo está bajo control, tomarte el SpeedMax y huir a tu cuarto->Huir_Cuarto]]
+
+
+
+:: Consejo_Sofia {"position":"1500,600","size":"100,100"}
+<<set $conocimiento += 10>>
+<<set $estres -= 15>>
+<div class="text-card">
+Sofía se ríe, te da una palmada en la espalda y te dice: *"No te satures memorizando, busca la manera de hacerlo más didáctico. Organiza tus prioridades y descansa al menos 4 horas o tu cerebro colapsará"*. Sus palabras te dan paz mental.
+
+</div>
+* [[Agradecerle a Sofía, volver a tu cuarto y seguir su plan->Plan_Sofia]]
+
+
+
+:: DesenlaceIncierto {"position":"1300,1200","size":"100,100"}
+<div class="text-card">
+Sobreviviste de milagro. No fue tu mejor desempeño: tuviste que inventar la mitad de las respuestas basándote en pura intuición y café, y tu salud mental quedó temblando. El profesor te aprueba raspando con un 3.0, advirtiéndote que la próxima vez el margen de error será menor.
+
+</div>
+<<link "Volver a jugar">><<run Engine.restart()>><</link>>
+
+
+:: DesenlaceNegativo {"position":"1100,1200","size":"100,100"}
+<div class="text-card">
+El colapso total. El cansancio extremo y los niveles críticos de estrés hacen que tu mente quede completamente en blanco frente al papel. No recuerdas cómo se estructuraba la lógica y terminas entregando la hoja incompleta. El desastre académico es inevitable por esta vez.
+
+</div>
+<<link "Volver a jugar">><<run Engine.restart()>><</link>>
+
+
+:: DesenlacePositivo {"position":"900,1200","size":"100,100"}
+<div class="text-card">
+¡Lo lograste! Gracias a tu constancia, al equilibrio entre el estudio y el descanso, y a la ayuda oportuna, la lógica fluye en tu cabeza de manera natural. Respondes el examen con soltura y entregas el trabajo a tiempo. Sales del salón con una paz mental inmensa sabiendo que la disciplina dio frutos.
+
+</div>
+<<link "Volver a jugar">><<run Engine.restart()>><</link>>
+
+
+:: Distraccion_Redes {"position":"1100,400","size":"100,100"}
+<<set $estres += 30>>
+<<set $energia -= 30>>
+<<set $conocimiento -= 10>>
+<div class="text-card">
+Coges el celular. "Solo un video rápido", te dices. Tres horas más tarde, has visto tutoriales extraños y la batería del celular está temblando. El tiempo voló trágicamente y la culpa te carcome por dentro. 
+
+</div>
+* [[Entrar en pánico total al ver la hora (3:00 AM) y abrir los libros->Panico_Medianoche]]
+
+
+
+:: El Laberinto del Reloj: ¿Estudiar o Procrastinar? {"position":"1100,200","size":"100,100"}
+<<set $estres = 10>>
+<<set $conocimiento = 5>>
+<<set $energia = 100>>
+
+<div class="text-card">
+Son las 9:00 PM de un domingo eterno. Tienes un examen gigante de Matemáticas Discretas mañana a las 7:00 AM. 
+
+Tu escritorio es un campo de batalla: tienes los apuntes de Divisibilidad y Representación abiertos, pero tu teléfono no para de vibrar en la esquina. Sientes que el tiempo se te disuelve entre las manos. ¿Qué vas a hacer?
+
+</div>
+* [[Leer los apuntes de Discretas y empezar a hacer ejercicios de una vez->Estudio_Limpio]]
+* [[Revisar el celular "solo por 5 minutos"->Distraccion_Redes]]
+* [[Ir a la cocina por una dosis masiva de cafeína y azúcar->Cocina_SpeedMax]]
+
+
+
+:: El_Examen_Final {"position":"1100,1000","size":"100,100"}
+<div class="text-card">
+Son las 6:50 AM, entras al salón de clases. El profesor reparte la hoja de evaluación y sientes que el corazón te va a explotar. Es el momento de la verdad.
+
+</div>
+<<if $conocimiento >= 25 and $estres < 50>>
+    [[Ver los resultados de tu esfuerzo->DesenlacePositivo]]
+<<elseif $estres >= 50 or $conocimiento < 15>>
+    [[Ver los resultados de tu esfuerzo->DesenlaceNegativo]]
+<<else>>
+    [[Ver los resultados de tu esfuerzo->DesenlaceIncierto]]
+<</if>>
+
+
+
+:: EstudioZombi {"position":"1000,800","size":"100,100"}
+<<set $conocimiento += 5>>
+<<set $estres += 15>>
+<div class="text-card">
+Te obligas a leer en modo automático. Memorizas conceptos sin comprenderlos de verdad. Estás tan agotado que cometes errores tontos en los ejercicios, lo que te frustra todavía más.
+
+</div>
+* [[Aceptar que hiciste lo que pudiste y esperar el amanecer->El_Examen_Final]]
+
+
+
+:: Estudio_Limpio {"position":"600,400","size":"100,100"}
+<<set $conocimiento += 15>>
+<<set $estres += 10>>
+<div class="text-card">
+Te sientas, te pones audífonos y te obligas a entender la representación binaria, octal y hexadecimal. Cuesta al principio, pero vas asimilando los conceptos clave. De repente, tu teléfono suena: es Carlos, tu compañero de clase, mandándote audios de WhatsApp desesperado porque no entiende nada de los temas del examen.
+
+</div>
+* [[Ignorar a Carlos y seguir concentrado en lo tuyo->Ruta_Solitaria]]
+* [[Contestarle a Carlos y proponerle una llamada rápida de estudio->Llamada_Carlos]]
+
+
+
+:: Fase_Descanso {"position":"600,800","size":"100,100"}
+<<set $energia += 15>>
+<<set $estres -= 10>>
+<div class="text-card">
+Decides apagar la pantalla a las 2:00 AM y dormir exactamente 4 horas. Aunque no es el descanso ideal, al menos le permites a tu cerebro consolidar algo de información antes de que suene la alarma.
+
+</div>
+* [[Suena la alarma a las 6:00 AM, hay que correr a la universidad->El_Examen_Final]]
+
+
+
+:: Huir_Cuarto {"position":"1700,600","size":"100,100"}
+<<set $estres += 15>>
+<<set $conocimiento += 5>>
+<<set $energia -= 20>>
+<div class="text-card">
+Le sonríes a Sofía con falsa seguridad y te encierras en tu habitación. La cafeína combinada con la ansiedad hace que tu mente revolotee entre mil pensamientos oscuros. No puedes dormir ni estudiar; solo miras el techo sudando frío.
+
+</div>
+* [[Rendirse al insomnio y esperar que amanezca->EstudioZombi]]
+* [[Intentar repasar a la fuerza con la mente en blanco->Amanecida_Total]]
+
+
+
+:: Llamada_Carlos {"position":"700,600","size":"100,100"}
+<<set $conocimiento += 10>>
+<<set $estres += 15>>
+<div class="text-card">
+Haces videollamada con Carlos. Al explicarle los temas a él, terminas por entenderlos tú también (el poder de enseñar). Sin embargo, Carlos habla por los codos y la llamada se alarga más de la cuenta, robándote valiosas horas de sueño.
+
+</div>
+* [[Despedirte de Carlos e intentar dormir un poco->Fase_Descanso]]
+* [[Seguir derecho estudiando de largo hasta el amanecer->Amanecida_Total]]
+
+
+
+:: Llamada_Desesperada {"position":"1200,800","size":"100,100"}
+<<set $conocimiento += 5>>
+<<set $estres -= 10>>
+<div class="text-card">
+Le escribes a Carlos y, para tu sorpresa, él también sigue despierto. Intercambian apuntes por chat y se explican mutuamente los puntos que no entendían. Se salvan la vida mutuamente a última hora.
+
+</div>
+* [[Cerrar los chats y prepararse para el día->El_Examen_Final]]
+
+
+
+:: Panico_Medianoche {"position":"1100,600","size":"100,100"}
+<<set $estres += 25>>
+<<set $energia -= 15>>
+<div class="text-card">
+Ves el reloj: ¡11:30 PM! Sientes que el pecho se te cierra del pánico. Abres los apuntes, pero las letras bailan frente a tus ojos. Intentas leer un párrafo tres veces y no procesas absolutamente nada debido a la culpa.
+
+</div>
+* [[Intentar forzar a tu cerebro a memorizar sin entender->EstudioZombi]]
+* [[Llamar a Carlos a pesar de la hora para ver si él salvó algo->Llamada_Desesperada]]
+
+
+
+:: Pausa_Estiramiento {"position":"400,800","size":"100,100"}
+<<set $estres -= 5>>
+<<set $energia += 10>>
+<div class="text-card">
+Te levantas, estiras la espalda y te asomas a la ventana un par de minutos para respirar aire fresco. Esa pequeña pausa frena el ciclo de ansiedad y te ayuda a despejar la mente.
+
+</div>
+* [[Volver al escritorio con la mente más clara->Fase_Descanso]]
+
+
+
+:: Plan_Sofia {"position":"1500,800","size":"100,100"}
+<<set $conocimiento += 15>>
+<<set $estres -= 20>>
+<div class="text-card">
+Sigues el consejo de Sofía al pie de la letra. Te concentras en los ejemplos que dio el profesor en clase en lugar de atormentarte con detalles menores. Te acuestas temprano y duermes bien.
+
+</div>
+* [[Despertar renovado y listo para afrontar la prueba->El_Examen_Final]]
+
+
+
+:: Ruta_Solitaria {"position":"500,600","size":"100,100"}
+<<set $conocimiento += 10>>
+<<set $estres += 5>>
+<div class="text-card">
+Decides ignorar los mensajes de Carlos para mantener el foco. Al principio funciona: logras entender de donde salen los números bianrios. Sin embargo, el silencio de la habitación empieza a volverse pesado y la soledad de la medianoche te juega en contra.
+
+</div>
+* [[Continuar programando con un SpeedMax y resistencia mental->Fase_Descanso]]
+* [[Tomar un respiro de 10 minutos y estirar las piernas->Pausa_Estiramiento]]
